@@ -4,7 +4,7 @@
  一个基于 [pro-components](https://github.com/vueComponent/pro-components) 的基础后台管理系统模板
 
 ## 🔨 Features
-😶 Emm, if you can't stand various complex templates, this might be a good choice:
+😶 Emm, 如果你无法忍受各种复杂的模板，这可能是一个不错的选择:
 - Vue 3
 - Typescript
 - ant-design-vue
@@ -12,4 +12,4 @@
 - ...
 
 ## 👥 end
-enjoy it :)
+希望你会喜欢 :)
