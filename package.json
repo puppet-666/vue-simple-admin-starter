@@ -1,7 +1,20 @@
 {
-  "name": "preview-pro",
-  "version": "0.0.0",
-  "private": true,
+  "name": "vue-simple-admin-starter",
+  "version": "0.0.1",
+  "description": "A basic backend management system template based on Vue3 and pro-components",
+  "author": "puppetk-666<https://github.com/puppet-666>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:puppet-666/vue-simple-admin-starter.git"
+  },
+  "keywords": [
+    "vue3",
+    "ant-design-vue",
+    "ant-design-pro",
+    "admin",
+    "template-project"
+  ],
   "scripts": {
     "dev": "vite",
     "dev:force": "vite --force",
