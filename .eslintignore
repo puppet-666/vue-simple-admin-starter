@@ -1,0 +1,13 @@
+src/auto-imports.d.ts
+src/components.d.ts
+build/
+coverage/
+dist/
+es/
+lib/
+node_modules/
+**/*.min.js
+**/*-min.js
+**/*.bundle.js
+static/
+public/
