@@ -1,7 +1,6 @@
 <script setup lang="ts">
 import { RouterLink, RouterView, useRouter } from 'vue-router';
 import { type RouteContextProps, clearMenuItem, getMenuData } from '@ant-design-vue/pro-layout';
-import { HeartOutlined, SmileOutlined } from '@ant-design/icons-vue';
 
 const router = useRouter();
 const { menuData } = getMenuData(clearMenuItem(router.getRoutes()));

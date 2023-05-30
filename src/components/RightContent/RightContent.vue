@@ -1,6 +1,4 @@
 <script setup lang="ts">
-import { LogoutOutlined, SettingOutlined, UserOutlined } from '@ant-design/icons-vue';
-
 export interface CurrentUser {
   nickname: string
   avatar?: string

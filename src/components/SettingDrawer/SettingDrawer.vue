@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { CloseOutlined, SettingOutlined } from '@ant-design/icons-vue';
 import type { CheckedType } from 'ant-design-vue/es/switch';
 
 type ConfType = 'layout' | 'fixedHeader' | 'fixSiderbar' | string;
@@ -158,13 +157,13 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
   height: 48px;
   font-size: 16px;
   text-align: center;
-  background: var(--primary-color);
+  background: #f6f6f7;
   border-radius: 4px 0 0 4px;
   cursor: pointer;
   pointer-events: auto;
+  box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
 
   > span {
-    color: rgb(255, 255, 255);
     font-size: 20px;
   }
 }

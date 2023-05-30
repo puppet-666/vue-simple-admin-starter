@@ -3,7 +3,6 @@ import { computed, onMounted, reactive, ref, watchEffect } from 'vue';
 import { type RouteRecordName, type RouteRecordRaw, useRouter } from 'vue-router';
 import { Avatar as AAvatar, Breadcrumb as ABreadcrumb, BreadcrumbItem as ABreadcrumbItem } from 'ant-design-vue';
 import { WaterMark, clearMenuItem, getMenuData } from '@ant-design-vue/pro-layout';
-import { UserOutlined } from '@ant-design/icons-vue';
 import type { RouteContextProps } from '@ant-design-vue/pro-layout';
 
 const loading = ref(false);

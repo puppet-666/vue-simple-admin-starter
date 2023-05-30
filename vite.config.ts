@@ -16,22 +16,31 @@ export default defineConfig(() => {
       vue(),
       vueJsx(),
       AutoImport({
-        dts: 'src/auto-imports.d.ts',
-        imports: ['vue', 'vue-router'],
         eslintrc: {
           enabled: true,
-          filepath: './.eslintrc-auto-import.json',
-          globalsPropValue: true,
         },
+        include: [
+          /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
+          /\.vue$/, /\.vue\?vue/, // .vue
+        ],
+        imports: ['vue',
+          'vue-router',
+          '@vueuse/core', {
+            axios: [
+              ['default', 'axios'],
+            ],
+            '@vueuse/integrations/useAxios': [
+              'useAxios',
+            ],
+            'ant-design-vue': ['message'],
+          }
+        ],
       }),
       Components({
-        dts: 'src/components.d.ts',
-        deep: true,
-        dirs: ['src/components'],
-        extensions: ['vue', 'tsx'],
+        dts: true,
         resolvers: [
           AntDesignVueResolver({
-            importStyle: false,
+            resolveIcons: true,
           }),
         ],
       }),

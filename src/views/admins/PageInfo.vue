@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import { LikeOutlined } from '@ant-design/icons-vue';
 import { useRoute } from 'vue-router';
 
 const route = useRoute();
