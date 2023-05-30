@@ -16,7 +16,10 @@
   "dependencies": {
     "@ant-design-vue/pro-layout": "^3.2.2",
     "@ant-design/icons-vue": "^6.1.0",
+    "@vueuse/core": "^10.1.2",
+    "@vueuse/integrations": "^10.1.2",
     "ant-design-vue": "^3.2.20",
+    "axios": "^1.4.0",
     "vue": "^3.2.35",
     "vue-router": "^4.2.2"
   },
