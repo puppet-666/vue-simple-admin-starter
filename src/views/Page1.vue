@@ -9,7 +9,7 @@ const handleClick = () => {
 </script>
 
 <template>
-  <PageContainer>
+  <page-container>
     <a-result
       status="404"
       :style="{
@@ -25,5 +25,5 @@ const handleClick = () => {
         </a-button>
       </template>
     </a-result>
-  </PageContainer>
+  </page-container>
 </template>

@@ -4,6 +4,6 @@ module.exports = {
     './.eslintrc-auto-import.json',
   ],
   rules: {
-    'no-console': false
+    'no-console': 0,
   },
 };

@@ -6,9 +6,9 @@ useUserTheme();
 </script>
 
 <template>
-  <ConfigProvider>
+  <config-provider>
     <router-view />
-  </ConfigProvider>
+  </config-provider>
 </template>
 
 <style>

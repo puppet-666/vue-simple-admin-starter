@@ -26,14 +26,14 @@ export default defineConfig(() => {
         imports: ['vue',
           'vue-router',
           '@vueuse/core', {
-            axios: [
+            'axios': [
               ['default', 'axios'],
             ],
             '@vueuse/integrations/useAxios': [
               'useAxios',
             ],
             'ant-design-vue': ['message'],
-          }
+          },
         ],
       }),
       Components({

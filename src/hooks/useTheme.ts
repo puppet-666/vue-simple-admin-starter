@@ -16,12 +16,6 @@ export const colors: string[] = [
   '#52c41a',
 ];
 
-export const useUserTheme = () => {
-  onBeforeMount(() => {
-    apply(load());
-  });
-};
-
 export const randomTheme = (): string => {
   const i = Math.floor(Math.random() * 10);
   return colors[i];
@@ -43,4 +37,10 @@ export const apply = (color: string) => {
     },
   });
   save(color);
+};
+
+export const useUserTheme = () => {
+  onBeforeMount(() => {
+    apply(load());
+  });
 };
