@@ -35,6 +35,11 @@ export default defineConfig(() => {
             'ant-design-vue': ['message'],
           },
         ],
+        dirs: [
+          './src/utils',
+          './src/components',
+          './src/hooks',
+        ],
       }),
       Components({
         dts: true,
