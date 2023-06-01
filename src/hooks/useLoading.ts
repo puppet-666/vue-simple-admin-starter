@@ -1,16 +1,19 @@
-import { inject, provide, ref } from 'vue';
+import { ref } from 'vue';
 
-const INJECT_LOADING_KEY = Symbol('loading_store');
+export default function useLoading(initValue = false) {
+  const loading = ref(initValue);
 
-export const createLoading = (v = false) => {
-  const loading = ref<boolean>(v);
-  const change = (bool: boolean) => {
-    loading.value = bool;
+  const setLoading = (value: boolean) => {
+    loading.value = value;
   };
-  provide(INJECT_LOADING_KEY, loading);
-  return [loading, change];
-};
 
-export const useLoading = () => {
-  return inject(INJECT_LOADING_KEY);
-};
+  const toggle = () => {
+    loading.value = !loading.value;
+  };
+
+  return {
+    loading,
+    setLoading,
+    toggle,
+  };
+}
