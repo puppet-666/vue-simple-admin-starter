@@ -23,9 +23,11 @@ export default defineConfig(() => {
           /\.[tj]sx?$/, // .ts, .tsx, .js, .jsx
           /\.vue$/, /\.vue\?vue/, // .vue
         ],
-        imports: ['vue',
+        imports: [
+          'vue',
           'vue-router',
-          '@vueuse/core', {
+          '@vueuse/core',
+          {
             'axios': [
               ['default', 'axios'],
             ],
@@ -33,12 +35,37 @@ export default defineConfig(() => {
               'useAxios',
             ],
             'ant-design-vue': ['message'],
+            'nprogress': [
+              ['default', 'NProgress'],
+            ],
+            'mitt': [
+              ['default', 'mitt'],
+            ],
+            'mockjs': [
+              ['default', 'Mock'],
+            ],
+          },
+          {
+            from: 'vue-router',
+            imports: ['LocationQueryRaw', 'Router', 'RouteLocationNormalized', 'RouteRecordRaw', 'RouteRecordNormalized'],
+            type: true,
+          },
+          {
+            from: 'mitt',
+            imports: ['Handler'],
+            type: true,
+          },
+          {
+            from: 'axios',
+            imports: ['RawAxiosRequestConfig'],
+            type: true,
           },
         ],
         dirs: [
           './src/utils',
           './src/components',
           './src/hooks',
+          './src/store',
         ],
       }),
       Components({

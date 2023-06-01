@@ -7,6 +7,11 @@ export interface CurrentUser {
 defineProps<{
   currentUser: CurrentUser
 }>();
+
+const { logout } = useUser();
+const handleLogout = () => {
+  logout();
+};
 </script>
 
 <template>
@@ -21,7 +26,7 @@ defineProps<{
               </template>
               <span>个人设置</span>
             </a-menu-item>
-            <a-menu-item>
+            <a-menu-item @click="handleLogout">
               <template #icon>
                 <logout-outlined />
               </template>

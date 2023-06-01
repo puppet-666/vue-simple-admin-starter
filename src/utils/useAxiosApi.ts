@@ -16,7 +16,6 @@ instance.interceptors.request.use(
   },
   (error) => {
     // do something with request error
-    // eslint-disable-next-line no-console
     console.log(error); // for debug
     return Promise.reject(error);
   },
@@ -37,7 +36,6 @@ instance.interceptors.response.use(
     }
   },
   (error) => {
-    // eslint-disable-next-line no-console
     console.log(`err${error}`);
     message.error(error.message);
     return Promise.reject(error.message);
@@ -48,6 +46,6 @@ instance.interceptors.response.use(
  * reactive useFetchApi
  */
 
-export default function useAxiosApi(url: string, config: any) {
-  return useAxios(url, config);
+export default function useAxiosApi<T>(url: string, config?: RawAxiosRequestConfig) {
+  return useAxios<T>(url, config);
 }
