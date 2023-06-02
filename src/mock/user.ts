@@ -10,7 +10,7 @@ setupMock({
     // Mock.XHR.prototype.withCredentials = true;
 
     // 用户信息
-    Mock.mock(new RegExp('/api/user/info'), () => {
+    Mock.mock(new RegExp('.*/api/user/info'), () => {
       if (isLogin()) {
         const role = window.localStorage.getItem('userRole') || 'admin';
         return successResponseWrap({
@@ -37,7 +37,7 @@ setupMock({
     });
 
     // 登录
-    Mock.mock(new RegExp('/api/user/login'), (params: MockParams) => {
+    Mock.mock(new RegExp('.*/api/user/login'), (params: MockParams) => {
       const { username, password } = JSON.parse(params.body);
       if (!username) {
         return failResponseWrap(null, '用户名不能为空', 50000);
@@ -61,12 +61,12 @@ setupMock({
     });
 
     // 登出
-    Mock.mock(new RegExp('/api/user/logout'), () => {
+    Mock.mock(new RegExp('.*/api/user/logout'), () => {
       return successResponseWrap(null);
     });
 
     // 用户的服务端菜单
-    Mock.mock(new RegExp('/api/user/menu'), () => {
+    Mock.mock(new RegExp('.*/api/user/menu'), () => {
       const menuList = [
         {
           path: '/dashboard',
