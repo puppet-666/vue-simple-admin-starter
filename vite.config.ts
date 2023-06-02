@@ -12,6 +12,9 @@ export default defineConfig(() => {
   const lifecycle = process.env.npm_lifecycle_event;
 
   return {
+    server: {
+      open: true,
+    },
     plugins: [
       vue(),
       vueJsx(),
