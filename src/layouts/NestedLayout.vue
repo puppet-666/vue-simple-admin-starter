@@ -20,7 +20,7 @@ const routes = menuData.map((item) => {
 const cachedMap = menuData.reduce((pre, cur) => {
   const key = cur.name || cur.path;
   const child = cur.children || [];
-  pre[key] = child;
+  pre[key] = child as unknown as RouteRecordRaw;
   return pre;
 }, {} as Record<RouteRecordName, RouteRecordRaw>);
 
@@ -90,7 +90,7 @@ onMounted(() => {
         v-model:openKeys="baseState.childrenOpenKeys"
         nav-theme="light"
         :menu-header-render="false"
-        :menu-data="cachedMap[currentRouteKey]"
+        :menu-data="cachedMap[currentRouteKey as RouteRecordName]"
         :fix-siderbar="true"
         :is-children-layout="true"
         style="min-height: 100vh"
@@ -111,7 +111,7 @@ onMounted(() => {
           <div style="height: 100%; display: flex; align-items: center">
             <a-breadcrumb>
               <a-breadcrumb-item v-for="item of breadcrumb" :key="item.path">
-                <router-link :to="{ path: item.path, item: item.params }">
+                <router-link :to="{ path: item.path, item: item.params } as RouteLocationRaw">
                   {{ item.breadcrumbName }}
                 </router-link>
               </a-breadcrumb-item>
