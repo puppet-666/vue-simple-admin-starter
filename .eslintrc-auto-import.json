@@ -14,6 +14,7 @@
     "Ref": true,
     "RightContent": true,
     "RouteLocationNormalized": true,
+    "RouteLocationRaw": true,
     "RouteRecordNormalized": true,
     "RouteRecordRaw": true,
     "Router": true,

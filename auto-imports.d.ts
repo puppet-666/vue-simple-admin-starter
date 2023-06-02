@@ -317,7 +317,7 @@ declare global {
   // @ts-ignore
   export type { Component, ComponentPublicInstance, ComputedRef, InjectionKey, PropType, Ref, VNode } from 'vue'
   // @ts-ignore
-  export type { LocationQueryRaw, Router, RouteLocationNormalized, RouteRecordRaw, RouteRecordNormalized } from 'vue-router'
+  export type { LocationQueryRaw, Router, RouteLocationNormalized, RouteRecordRaw, RouteRecordNormalized, RouteLocationRaw } from 'vue-router'
   // @ts-ignore
   export type { Handler } from 'mitt'
   // @ts-ignore

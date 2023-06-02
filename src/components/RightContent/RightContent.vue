@@ -12,12 +12,29 @@ const { logout } = useUser();
 const handleLogout = () => {
   logout();
 };
+
+const { isFullscreen, toggle: toggleFullScreen } = useFullscreen();
 </script>
 
 <template>
   <div style="margin-right: 12px">
-    <a-space>
-      <a-dropdown>
+    <a-space :size="24">
+      <a-tooltip>
+        <template #title>
+          {{ isFullscreen ? '点击退出全屏模式' : '点击切换全屏模式' }}
+        </template>
+        <a-button
+          type="dashed"
+          size="small"
+          @click="toggleFullScreen"
+        >
+          <template #icon>
+            <fullscreen-exit-outlined v-if="isFullscreen" />
+            <fullscreen-outlined v-else />
+          </template>
+        </a-button>
+      </a-tooltip>
+      <a-dropdown :trigger="['click']">
         <template #overlay>
           <a-menu>
             <a-menu-item>

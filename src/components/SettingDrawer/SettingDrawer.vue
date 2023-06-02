@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import type { CheckedType } from 'ant-design-vue/es/switch';
+type CheckedType = boolean | string | number;
 
 type ConfType = 'layout' | 'fixedHeader' | 'fixSiderbar' | string;
 
@@ -33,7 +33,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
     </template>
     <div class="margin-bottom: 24px">
       <h3>导航模式</h3>
-      <a-radio-group :value="modelValue.layout" @change="e => updateConf(e.target.value, 'layout')">
+      <a-radio-group :value="modelValue.layout" @change="(e: Event) => updateConf((e.target as HTMLInputElement).value, 'layout')">
         <a-radio value="side">
           左侧菜单布局
         </a-radio>
@@ -54,7 +54,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
             checked-children="开"
             un-checked-children="关"
             :checked="modelValue.fixedHeader"
-            @change="checked => updateConf(checked, 'fixedHeader')"
+            @change="(checked: boolean) => updateConf(checked, 'fixedHeader')"
           />
         </a-col>
       </a-row>
@@ -67,7 +67,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
             checked-children="开"
             un-checked-children="关"
             :checked="modelValue.fixSiderbar"
-            @change="checked => updateConf(checked, 'fixSiderbar')"
+            @change="(checked: boolean) => updateConf(checked, 'fixSiderbar')"
           />
         </a-col>
       </a-row>
@@ -80,7 +80,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
             checked-children="开"
             un-checked-children="关"
             :checked="modelValue.splitMenus"
-            @change="checked => updateConf(checked, 'splitMenus')"
+            @change="(checked: boolean) => updateConf(checked, 'splitMenus')"
           />
         </a-col>
       </a-row>
@@ -96,7 +96,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
             checked-children="开"
             un-checked-children="关"
             :checked="modelValue.headerRender === undefined"
-            @change="checked => updateConf(checked === true && undefined, 'headerRender')"
+            @change="(checked: boolean) => updateConf(checked === true && undefined, 'headerRender')"
           />
         </a-col>
       </a-row>
@@ -109,7 +109,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
             checked-children="开"
             un-checked-children="关"
             :checked="modelValue.footerRender === undefined"
-            @change="checked => updateConf(checked === true && undefined, 'footerRender')"
+            @change="(checked: boolean) => updateConf(checked === true && undefined, 'footerRender')"
           />
         </a-col>
       </a-row>
@@ -123,7 +123,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
             checked-children="开"
             un-checked-children="关"
             :checked="modelValue.menu === undefined"
-            @change="checked => updateConf(checked === true && undefined, 'menu')"
+            @change="(checked: boolean) => updateConf(checked === true && undefined, 'menu')"
           />
         </a-col>
       </a-row>
@@ -136,7 +136,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
             checked-children="开"
             un-checked-children="关"
             :checked="modelValue.menuHeaderRender === undefined"
-            @change="checked => updateConf(checked === true && undefined, 'menuHeaderRender')"
+            @change="(checked: boolean) => updateConf(checked === true && undefined, 'menuHeaderRender')"
           />
         </a-col>
       </a-row>
