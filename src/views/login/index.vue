@@ -6,10 +6,7 @@ import LoginForm from './components/login-form.vue';
 <template>
   <div class="container">
     <div class="logo">
-      <img
-        alt="logo"
-        src="../../assets/logo.png"
-      >
+      <img src="https://alicdn.antdv.com/v2/assets/logo.1ef800a8.svg">
       <div class="logo-text">
         Simple Admin
       </div>
