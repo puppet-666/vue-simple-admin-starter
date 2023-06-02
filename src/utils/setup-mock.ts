@@ -1,7 +1,7 @@
 import debug from './env';
 
 export default ({ mock, setup }: { mock?: boolean; setup(): void }) => {
-  if (mock !== false && debug) {
+  if ((mock !== false && debug) || import.meta.env.VITE_FORCE_MOCK) {
     setup();
   }
 };
