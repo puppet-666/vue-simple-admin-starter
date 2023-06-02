@@ -7,6 +7,7 @@ import configImageminPlugin from './plugin/imagemin';
 export default mergeConfig(
   {
     mode: 'production',
+    base: '/vue-simple-admin-starter',
     plugins: [
       configCompressPlugin('gzip'),
       configVisualizerPlugin(),
