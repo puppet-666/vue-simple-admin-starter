@@ -47,5 +47,6 @@ instance.interceptors.response.use(
  */
 
 export default function useAxiosApi<T>(url: string, config?: RawAxiosRequestConfig) {
-  return useAxios<T>(url, config);
+  const fnConfig = config || {};
+  return useAxios(url, fnConfig, instance);
 }
