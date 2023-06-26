@@ -9,6 +9,7 @@ declare global {
   const NProgress: typeof import('nprogress')['default']
   const RightContent: typeof import('./src/components/index')['RightContent']
   const SettingDrawer: typeof import('./src/components/index')['SettingDrawer']
+  const TabBar: typeof import('./src/components/index')['TabBar']
   const apply: typeof import('./src/hooks/useTheme')['apply']
   const asyncComputed: typeof import('@vueuse/core')['asyncComputed']
   const autoResetRef: typeof import('@vueuse/core')['autoResetRef']

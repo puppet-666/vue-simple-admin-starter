@@ -2,7 +2,8 @@ import { createRouter, createWebHistory } from 'vue-router';
 import { NOT_FOUND_ROUTE, REDIRECT_MAIN } from './routes/base';
 import createRouteGuard from './guard';
 import { appRoutes } from './routes';
-import BasicLayout from '@/layouts/BasicLayout.vue';
+import { DEFAULT_ROUTE_NAME } from './constants';
+import BasicLayout from '@/layouts/basic-layout.vue';
 import 'nprogress/nprogress.css';
 
 NProgress.configure({ showSpinner: false }); // NProgress Configuration
@@ -18,7 +19,7 @@ const router = createRouter({
       name: 'index',
       meta: { title: 'Home' },
       component: BasicLayout,
-      redirect: 'login',
+      redirect: DEFAULT_ROUTE_NAME,
       children: [
         ...appRoutes,
       ],

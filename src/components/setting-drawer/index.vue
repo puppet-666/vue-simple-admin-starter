@@ -18,7 +18,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
     ...toRaw(props.modelValue),
     [`${type}`]: val,
   };
-  console.log('newConf', newVal);
+
   emit('update:modelValue', newVal);
 };
 </script>
@@ -137,6 +137,19 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
             un-checked-children="关"
             :checked="modelValue.menuHeaderRender === undefined"
             @change="(checked: boolean) => updateConf(checked === true && undefined, 'menuHeaderRender')"
+          />
+        </a-col>
+      </a-row>
+      <a-row style="margin-bottom: 12px">
+        <a-col :span="12">
+          多页签
+        </a-col>
+        <a-col :span="12" style="text-align: right">
+          <a-switch
+            checked-children="开"
+            un-checked-children="关"
+            :checked="modelValue.multipleTab"
+            @change="(checked: boolean) => updateConf(checked, 'multipleTab')"
           />
         </a-col>
       </a-row>

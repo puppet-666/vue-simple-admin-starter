@@ -17,6 +17,7 @@ const proConfig = ref({
   fixedHeader: true,
   fixSiderbar: true,
   splitMenus: true,
+  multipleTab: true,
 });
 const breadcrumb = computed(() =>
   router.currentRoute.value.matched.concat().map((item) => {
@@ -69,16 +70,19 @@ watch(
     <!-- custom breadcrumb itemRender  -->
     <template #breadcrumbRender="{ route, params, routes }">
       <span v-if="routes.indexOf(route) === routes.length - 1">
-        <heart-outlined />
+        <!-- <heart-outlined /> -->
         {{ route.breadcrumbName }}
       </span>
       <router-link
         v-else
         :to="{ path: route.path, params }"
       >
-        <smile-outlined />
+        <!-- <smile-outlined /> -->
         {{ route.breadcrumbName }}
       </router-link>
+    </template>
+    <template v-if="proConfig.multipleTab" #tabRender>
+      <TabBar />
     </template>
     <SettingDrawer v-model="proConfig" />
     <router-view v-slot="{ Component, route }">

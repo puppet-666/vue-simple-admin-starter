@@ -1,4 +1,4 @@
-export const DEFAULT_LAYOUT = () => import('@/layouts/BasicLayout.vue');
+export const DEFAULT_LAYOUT = () => import('@/layouts/basic-layout.vue');
 
 export const REDIRECT_MAIN: RouteRecordRaw = {
   path: '/redirect',
