@@ -19,6 +19,7 @@
     "RouteRecordRaw": true,
     "Router": true,
     "SettingDrawer": true,
+    "TabBar": true,
     "VNode": true,
     "apply": true,
     "asyncComputed": true,

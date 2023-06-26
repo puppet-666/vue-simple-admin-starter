@@ -52,9 +52,9 @@ const { isFullscreen, toggle: toggleFullScreen } = useFullscreen();
           </a-menu>
         </template>
         <a-avatar shape="square" size="small">
-          <template #icon>
+          <!-- <template #icon>
             <user-outlined />
-          </template>
+          </template> -->
           {{ currentUser.nickname }}
         </a-avatar>
       </a-dropdown>

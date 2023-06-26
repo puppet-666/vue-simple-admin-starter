@@ -9,6 +9,7 @@ export {}
 
 declare module '@vue/runtime-core' {
   export interface GlobalComponents {
+    AAffix: typeof import('ant-design-vue/es')['Affix']
     AAvatar: typeof import('ant-design-vue/es')['Avatar']
     AButton: typeof import('ant-design-vue/es')['Button']
     ACard: typeof import('ant-design-vue/es')['Card']
@@ -25,6 +26,7 @@ declare module '@vue/runtime-core' {
     AInput: typeof import('ant-design-vue/es')['Input']
     AInputPassword: typeof import('ant-design-vue/es')['InputPassword']
     AMenu: typeof import('ant-design-vue/es')['Menu']
+    AMenuDivider: typeof import('ant-design-vue/es')['MenuDivider']
     AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
     APagination: typeof import('ant-design-vue/es')['Pagination']
     ARadio: typeof import('ant-design-vue/es')['Radio']
@@ -50,12 +52,14 @@ declare module '@vue/runtime-core' {
     LockOutlined: typeof import('@ant-design/icons-vue')['LockOutlined']
     LogoutOutlined: typeof import('@ant-design/icons-vue')['LogoutOutlined']
     RightCircleOutlined: typeof import('@ant-design/icons-vue')['RightCircleOutlined']
-    RightContent: typeof import('./src/components/RightContent/RightContent.vue')['default']
+    RightContent: typeof import('./src/components/right-content/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
-    SettingDrawer: typeof import('./src/components/SettingDrawer/SettingDrawer.vue')['default']
+    SettingDrawer: typeof import('./src/components/setting-drawer/index.vue')['default']
     SettingOutlined: typeof import('@ant-design/icons-vue')['SettingOutlined']
     SmileOutlined: typeof import('@ant-design/icons-vue')['SmileOutlined']
+    TabBar: typeof import('./src/components/tab-bar/index.vue')['default']
+    TabItem: typeof import('./src/components/tab-bar/tab-item.vue')['default']
     UserOutlined: typeof import('@ant-design/icons-vue')['UserOutlined']
   }
 }
