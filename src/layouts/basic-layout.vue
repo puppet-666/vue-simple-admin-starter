@@ -70,14 +70,12 @@ watch(
     <!-- custom breadcrumb itemRender  -->
     <template #breadcrumbRender="{ route, params, routes }">
       <span v-if="routes.indexOf(route) === routes.length - 1">
-        <!-- <heart-outlined /> -->
         {{ route.breadcrumbName }}
       </span>
       <router-link
         v-else
         :to="{ path: route.path, params }"
       >
-        <!-- <smile-outlined /> -->
         {{ route.breadcrumbName }}
       </router-link>
     </template>

@@ -5,21 +5,24 @@ import { TabBarState, TagProps } from './types';
 import {
   DEFAULT_ROUTE,
   DEFAULT_ROUTE_NAME,
+  LOGIN_ROUTE_NAME,
+  NOT_FOUND_ROUTE_NAME,
   REDIRECT_ROUTE_NAME,
 } from '@/router/constants';
 
 const formatTag = (route: RouteLocationNormalized): TagProps => {
-  const { name, meta, fullPath, query } = route;
+  const { name, meta, fullPath, query, params } = route;
   return {
     title: meta.title || '',
     name: String(name),
     fullPath,
     query,
+    params,
     ignoreCache: meta.ignoreCache,
   };
 };
 
-const BAN_LIST = [REDIRECT_ROUTE_NAME];
+const BAN_LIST = [REDIRECT_ROUTE_NAME, NOT_FOUND_ROUTE_NAME, LOGIN_ROUTE_NAME];
 
 const useAppStore = defineStore('tabBar', {
   state: (): TabBarState => ({
