@@ -19,7 +19,9 @@ const router = createRouter({
       name: 'index',
       meta: { title: 'Home' },
       component: BasicLayout,
-      redirect: DEFAULT_ROUTE_NAME,
+      redirect: {
+        name: DEFAULT_ROUTE_NAME,
+      },
       children: [
         ...appRoutes,
       ],
