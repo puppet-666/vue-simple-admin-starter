@@ -1,6 +1,7 @@
 <script lang="ts" setup>
 import { computed, onUnmounted, ref } from 'vue';
 import type { RouteLocationNormalized } from 'vue-router';
+import type { Affix } from 'ant-design-vue';
 import tabItem from './tab-item.vue';
 import {
   listenerRouteChange,
@@ -10,7 +11,7 @@ import { useTabBarStore } from '@/store';
 
 const tabBarStore = useTabBarStore();
 
-const affixRef = ref();
+const affixRef = ref<InstanceType<typeof Affix>>();
 const tagList = computed(() => {
   return tabBarStore.getTabList;
 });

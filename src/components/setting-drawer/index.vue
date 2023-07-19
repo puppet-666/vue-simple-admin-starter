@@ -24,7 +24,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
 </script>
 
 <template>
-  <a-drawer v-model:visible="visible" :width="300" placement="right" :closable="false">
+  <a-drawer v-model:open="visible" :width="300" placement="right" :closable="false">
     <template #handle>
       <div class="ant-pro-setting-drawer-handle" @click="handleShowDrawer">
         <setting-outlined v-if="!visible" />
