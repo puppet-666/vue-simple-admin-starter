@@ -12,5 +12,6 @@ declare module 'vue-router' {
     disabled?: boolean; // disable 菜单选项
     flatMenu?: boolean; // 隐藏自己，并且将子节点提升到与自己平级
     ignoreCache?: boolean; // 是否忽略 tab cache
+    noAffix?: boolean;  // 是否在tab中显示
   }
 }
