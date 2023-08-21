@@ -18,10 +18,6 @@ declare module '@vue/runtime-core' {
     ADivider: typeof import('ant-design-vue/es')['Divider']
     ADrawer: typeof import('ant-design-vue/es')['Drawer']
     ADropdown: typeof import('ant-design-vue/es')['Dropdown']
-    AForm: typeof import('ant-design-vue/es')['Form']
-    AFormItem: typeof import('ant-design-vue/es')['FormItem']
-    AInput: typeof import('ant-design-vue/es')['Input']
-    AInputPassword: typeof import('ant-design-vue/es')['InputPassword']
     AMenu: typeof import('ant-design-vue/es')['Menu']
     AMenuItem: typeof import('ant-design-vue/es')['MenuItem']
     AModal: typeof import('ant-design-vue/es')['Modal']
@@ -43,7 +39,6 @@ declare module '@vue/runtime-core' {
     LeftCircleOutlined: typeof import('@ant-design/icons-vue')['LeftCircleOutlined']
     LockOutlined: typeof import('@ant-design/icons-vue')['LockOutlined']
     LogoutOutlined: typeof import('@ant-design/icons-vue')['LogoutOutlined']
-    RightCircleOutlined: typeof import('@ant-design/icons-vue')['RightCircleOutlined']
     RightContent: typeof import('./src/components/right-content/index.vue')['default']
     RouterLink: typeof import('vue-router')['RouterLink']
     RouterView: typeof import('vue-router')['RouterView']
@@ -52,6 +47,5 @@ declare module '@vue/runtime-core' {
     SmileOutlined: typeof import('@ant-design/icons-vue')['SmileOutlined']
     TabBar: typeof import('./src/components/tab-bar/index.vue')['default']
     TabItem: typeof import('./src/components/tab-bar/tab-item.vue')['default']
-    UserOutlined: typeof import('@ant-design/icons-vue')['UserOutlined']
   }
 }
