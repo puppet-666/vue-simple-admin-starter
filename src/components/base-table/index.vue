@@ -114,7 +114,7 @@ async function query(pagination?: IQueryParams['pagination'], filters?: IQueryPa
     tableLoading.value = false;
   } catch (error) {
     console.log('error---', error);
-    message.error('获取列表失败');
+    message.error('fail to fetch table');
     tableLoading.value = false;
   }
 }
