@@ -12,6 +12,7 @@ import {
 const props = withDefaults(defineProps<{
   visible: boolean
   record: any
+  mode: string
 }>(), {
   visible: false,
 });
@@ -88,7 +89,7 @@ defineExpose({
 </script>
 
 <template>
-  <a-modal v-model:open="isShowModal" title="Add User" @cancel="handleCancel" @ok="handleOk">
+  <a-modal v-model:open="isShowModal" :title="mode === 'add' ? 'Add User' : 'Edit User'" @cancel="handleCancel" @ok="handleOk">
     <form-provider :form="form">
       <template v-for="item of column" :key="item.name">
         <field

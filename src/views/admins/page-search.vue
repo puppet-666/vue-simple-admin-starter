@@ -90,9 +90,18 @@ async function tableRequest(searchValues: IQueryParams['searchValues'], page: IQ
 }
 
 const visible = ref(false);
+const mode = ref('add');
+
+function handleAdd() {
+  mode.value = 'add';
+  visible.value = true;
+}
 
 const colRecord = ref();
-function handleEdit(r: any) {
+const colIndex = ref(-1);
+function handleEdit(r: any, index: number) {
+  mode.value = 'edit';
+  colIndex.value = index;
   colRecord.value = {
     ...r,
     __TIME__: new Date().valueOf(),
@@ -102,7 +111,11 @@ function handleEdit(r: any) {
 
 const userModal = ref();
 function handleOk(v: any) {
-  data.result.push(v);
+  if (mode.value === 'add') {
+    data.result.push(v);
+  } else {
+    data.result[colIndex.value] = v;
+  }
   visible.value = false;
   userModal.value?.reset();
 }
@@ -121,12 +134,12 @@ function handleOk(v: any) {
       </template>
 
       <template #operation>
-        <a-button type="primary" @click="visible = true">
+        <a-button type="primary" @click="handleAdd">
           add
         </a-button>
       </template>
 
-      <template #bodyCell="{ column, record }">
+      <template #bodyCell="{ column, record, index }">
         <template v-if="column.key === 'name'">
           <a>
             {{ record.name }}
@@ -145,11 +158,17 @@ function handleOk(v: any) {
         </template>
         <template v-else-if="column.key === 'action'">
           <span>
-            <a @click="handleEdit(record)">edit</a>
+            <a @click="handleEdit(record, index)">edit</a>
           </span>
         </template>
       </template>
     </base-table>
-    <add-user ref="userModal" v-model:visible="visible" :record="colRecord" @ok="handleOk" />
+    <add-user
+      ref="userModal"
+      v-model:visible="visible"
+      :record="colRecord"
+      :mode="mode"
+      @ok="handleOk"
+    />
   </page-container>
 </template>
