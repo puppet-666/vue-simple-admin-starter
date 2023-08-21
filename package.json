@@ -26,6 +26,8 @@
   "dependencies": {
     "@ant-design-vue/pro-layout": "^3.2.4",
     "@ant-design/icons-vue": "^6.1.0",
+    "@formily/core": "^2.2.29",
+    "@formily/vue": "^2.2.29",
     "@vueuse/core": "^10.1.2",
     "@vueuse/integrations": "^10.1.2",
     "ant-design-vue": "4.x",

@@ -33,6 +33,12 @@ const admins = [
         meta: { title: '动态参数页面', params: { id: 1 } },
         component: () => import('@/views/admins/dynamic-match.vue'),
       },
+      {
+        path: 'page-search',
+        name: 'page-search',
+        meta: { title: '查询表格' },
+        component: () => import('@/views/admins/page-search.vue'),
+      },
     ],
   },
   {
