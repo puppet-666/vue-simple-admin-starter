@@ -1,4 +1,5 @@
 import { ComponentResolver } from 'unplugin-vue-components';
+
 const AllComponents = [
   'Affix',
   'Alert',

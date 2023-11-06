@@ -1,5 +1,6 @@
 <script lang="ts" setup>
 import bannerImage from '@/assets/images/login-banner.png';
+
 const carouselItem = computed(() => [
   {
     slogan: '开箱即用的模板',

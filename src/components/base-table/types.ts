@@ -1,14 +1,14 @@
-import { type TablePaginationConfig } from 'ant-design-vue';
-import { type FilterValue, type SorterResult, type TableCurrentDataSource } from 'ant-design-vue/lib/table/interface';
-import { type DefaultRecordType } from 'ant-design-vue/lib/vc-table/interface';
+import type { TablePaginationConfig } from 'ant-design-vue';
+import type { FilterValue, SorterResult, TableCurrentDataSource } from 'ant-design-vue/lib/table/interface';
+import type { DefaultRecordType } from 'ant-design-vue/lib/vc-table/interface';
 
 export interface ISearchColumn {
   name: string
   title: string
   hide?: boolean
   type: string
-  initialValue?: 'visible' | 'hidden' | 'none'
-  display?: string
+  initialValue?: any
+  display?: 'visible' | 'hidden' | 'none'
   props?: Record<string, any>
   reactions?: [()=> void]
 }
