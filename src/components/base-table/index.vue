@@ -8,9 +8,9 @@ import {
   connect,
   mapProps,
 } from '@formily/vue';
-import { type PaginationProps } from 'ant-design-vue';
+import type { PaginationProps } from 'ant-design-vue';
 import { assign, isUndefined } from 'lodash-es';
-import { type IQueryParams, type ISearchColumn } from './types';
+import type { IQueryParams, ISearchColumn } from './types';
 import { componentsMap } from './constants';
 
 const props = withDefaults(defineProps<{

@@ -2,5 +2,5 @@
 /// <reference types="vite-plugin-pages/client" />
 
 interface Window {
-  readonly PKG: Record<string, string>;
+  readonly PKG: Record<string, string>
 }

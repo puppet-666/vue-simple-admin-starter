@@ -26,13 +26,13 @@ const props = defineProps({
 });
 
 enum Eaction {
-    reload = 'reload',
-    current = 'current',
-    left = 'left',
-    right = 'right',
-    others = 'others',
-    all = 'all',
-  }
+  reload = 'reload',
+  current = 'current',
+  left = 'left',
+  right = 'right',
+  others = 'others',
+  all = 'all',
+}
 
 const router = useRouter();
 const route = useRoute();
@@ -72,7 +72,7 @@ const tagClose = (tag: TagProps, idx: number) => {
 const findCurrentRouteIndex = () => {
   return tagList.value.findIndex(el => el.fullPath === route.fullPath);
 };
-const actionSelect = async (value: {key: string}) => {
+const actionSelect = async (value: { key: string }) => {
   const { key } = value;
   const { itemData, index } = props;
   const copyTagList = [...tagList.value];
