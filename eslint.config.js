@@ -1,4 +1,4 @@
-const chuhoman = require('@chuhoman/eslint-config').default
+const chuhoman = require('@chuhoman/eslint-config').default;
 
 module.exports = chuhoman(
   {},
@@ -8,6 +8,7 @@ module.exports = chuhoman(
       'prefer-regex-literals': 'off',
       '@typescript-eslint/consistent-type-assertions': 'off',
       'no-undef': 'off',
+      'ts/type-annotation-spacing': ['error', {}],
     },
   },
-)
+);

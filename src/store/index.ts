@@ -4,5 +4,5 @@ import useTabBarStore from './modules/tab-bar';
 
 const pinia = createPinia();
 
-export { useAppStore, useUserStore, useTabBarStore };
+export { useUserStore, useTabBarStore };
 export default pinia;
