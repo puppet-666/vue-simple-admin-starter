@@ -4,9 +4,11 @@ module.exports = chuhoman(
   {},
   {
     rules: {
-      'no-console': 0,
-      'prefer-regex-literals': 0,
-      '@typescript-eslint/consistent-type-assertions': 0,
+      'no-console': 'off',
+      'prefer-regex-literals': 'off',
+      '@typescript-eslint/consistent-type-assertions': 'off',
+      'no-undef': 'off',
+      'ts/type-annotation-spacing': ['error', {}],
     },
   },
 );

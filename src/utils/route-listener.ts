@@ -10,7 +10,7 @@ export function setRouteEmitter(to: RouteLocationNormalized) {
 }
 
 export function listenerRouteChange(
-  handler: (route: RouteLocationNormalized)=> void,
+  handler: (route: RouteLocationNormalized) => void,
   immediate = true,
 ) {
   emitter.on(key, handler as Handler);

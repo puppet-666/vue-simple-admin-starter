@@ -62,7 +62,6 @@ const handleSubmit = async (values: Record<string, any>) => {
       {{ errorMessage }}
     </div>
     <a-form
-      ref="loginForm"
       :model="userInfo"
       name="login"
       class="login-form"

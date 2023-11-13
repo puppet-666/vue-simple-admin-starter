@@ -10,7 +10,7 @@ export interface ISearchColumn {
   initialValue?: any
   display?: 'visible' | 'hidden' | 'none'
   props?: Record<string, any>
-  reactions?: [()=> void]
+  reactions?: [() => void]
 }
 
 export interface IQueryParams {

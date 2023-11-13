@@ -60,6 +60,7 @@ const searchColumn = computed(() => {
 const tableRef = ref();
 const attrs = useAttrs() as unknown as TableProps;
 const pageIndex = ref(1);
+// eslint-disable-next-line vue/no-setup-props-destructure
 const pageSize = ref(props.pagination?.defaultPageSize || 10);
 const total = ref(0);
 const filterValue = ref<Record<string, any>>();
