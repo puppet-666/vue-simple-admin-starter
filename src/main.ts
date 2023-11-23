@@ -1,4 +1,5 @@
 import './styles/index.less';
+import 'virtual:uno.css';
 
 import { createApp } from 'vue';
 import { ConfigProvider } from 'ant-design-vue';
