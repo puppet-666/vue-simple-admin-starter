@@ -5,6 +5,7 @@ import vueJsx from '@vitejs/plugin-vue-jsx';
 import AutoImport from 'unplugin-auto-import/vite';
 import Components from 'unplugin-vue-components/vite';
 import { AntDesignVueResolver } from 'unplugin-vue-components/resolvers';
+import UnoCSS from 'unocss/vite';
 
 export default defineConfig({
   plugins: [
@@ -72,6 +73,7 @@ export default defineConfig({
         }),
       ],
     }),
+    UnoCSS(),
   ],
   resolve: {
     alias: {
