@@ -5,7 +5,7 @@ const admins = [
     path: '/welcome',
     name: 'welcome',
     meta: { title: '工作台', icon: 'icon-icon-test' },
-    component: () => import('@/views/Page1.vue'),
+    component: () => import('@/views/home/index.vue'),
   },
   {
     path: '/admins',
