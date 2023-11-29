@@ -8,7 +8,7 @@ const props = defineProps({
     default: null,
   },
 });
-let chart: echarts.ECharts;
+let chart: echarts.ECharts | null = null;
 const chartRef = ref();
 
 function setOption(option: EChartsOption) {
@@ -36,6 +36,8 @@ onMounted(() => {
 onBeforeUnmount(() => {
   resizeObserver.unobserve(chartRef?.value);
   resizeObserver.disconnect();
+  chart?.dispose();
+  chart = null;
 });
 
 watch(
