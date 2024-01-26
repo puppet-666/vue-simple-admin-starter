@@ -240,3 +240,22 @@ onMounted(() => {
     </div>
   </div>
 </template>
+
+<style lang="less" scoped>
+.ant-layout-content {
+  .base-table-wrap {
+    .ant-table-wrapper {
+      border: 1px solid #F0F0F0;
+    }
+  }
+}
+
+.base-table-wrap {
+  .ant-table-wrapper {
+    padding: 24px;
+    background: #fff;
+    border-radius: 12px;
+    margin-bottom: 24px;
+  }
+}
+</style>
