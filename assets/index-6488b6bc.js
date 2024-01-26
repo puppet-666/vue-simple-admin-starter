@@ -1,1 +1,0 @@
-import{d as a,a0 as o,a1 as r,Z as s,a3 as n}from"./vue-3a608123.js";const d=a({__name:"index",setup(c){const e=o(),t=r().params.path;return e.replace({path:t}),(u,_)=>(s(),n("div"))}});export{d as default};
