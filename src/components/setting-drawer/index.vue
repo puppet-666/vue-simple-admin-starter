@@ -24,13 +24,11 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
 </script>
 
 <template>
+  <div class="ant-pro-setting-drawer-handle" @click="handleShowDrawer">
+    <setting-outlined v-if="!visible" />
+    <close-outlined v-else />
+  </div>
   <a-drawer v-model:open="visible" :width="300" placement="right" :closable="false">
-    <template #handle>
-      <div class="ant-pro-setting-drawer-handle" @click="handleShowDrawer">
-        <setting-outlined v-if="!visible" />
-        <close-outlined v-else />
-      </div>
-    </template>
     <div class="margin-bottom: 24px">
       <h3>导航模式</h3>
       <a-radio-group :value="modelValue.layout" @change="(e: Event) => updateConf((e.target as HTMLInputElement).value, 'layout')">
@@ -161,7 +159,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
 .ant-pro-setting-drawer-handle {
   position: absolute;
   top: 240px;
-  right: 300px;
+  right: 0px;
   z-index: 0;
   display: flex;
   align-items: center;
