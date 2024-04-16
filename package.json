@@ -33,7 +33,7 @@
     "@formily/vue": "^2.2.29",
     "@vueuse/core": "^10.1.2",
     "@vueuse/integrations": "^10.1.2",
-    "ant-design-vue": "4.x",
+    "ant-design-vue": "^4.1.2",
     "axios": "^1.4.0",
     "dayjs": "^1.11.9",
     "echarts": "^5.4.3",

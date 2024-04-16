@@ -160,7 +160,7 @@ const updateConf = (val: string | CheckedType | undefined, type: ConfType) => {
   position: absolute;
   top: 240px;
   right: 0px;
-  z-index: 10000;
+  z-index: 999;
   display: flex;
   align-items: center;
   justify-content: center;
